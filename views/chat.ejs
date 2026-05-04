@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Private Chat</h1>
+
+      <p>Вы вошли как: <b id="myName"></b></p>
+
+      <p>Чат с общими и приватными сообщениями через Socket.IO</p>
+
+      <h3>Пользователи онлайн</h3>
+      <div id="users"></div>
+
+      <h3>Тип сообщения</h3>
+
+      <label>
+        <input type="radio" name="messageType" value="public" checked />
+        Общий чат
+      </label>
+
+      <label>
+        <input type="radio" name="messageType" value="private" />
+        Личное сообщение
+      </label>
+
+      <h3>Сообщение</h3>
+
+      <div class="message-form">
+        <input id="msg" placeholder="Введите сообщение" />
+        <button id="sendBtn">Отправить</button>
+      </div>
+
+      <h3>Чат</h3>
+      <div id="chat"></div>
+
+      <br />
+      <a href="/">На главную</a>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>
